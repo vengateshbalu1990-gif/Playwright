@@ -8,7 +8,7 @@ test('browser handling',async()=>{
     const page2=await context.newPage();
     await page2.goto('https://www.flipkart.com/');
     await page2.waitForTimeout(4000);
-//browser 2
+//browser 2 new to git
     const browser2=await chromium.launch();
     const context2=await browser2.newContext();
     const page3=await context2.newPage();
