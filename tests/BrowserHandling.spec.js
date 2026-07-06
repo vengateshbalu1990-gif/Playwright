@@ -18,7 +18,7 @@ test('browser handling',async()=>{
     await page4.goto('https://www.facebook.com/');
     await page4.waitForTimeout(4000);
 
-    name="vengat"
+    name="vengatesh"
     age="35"
 
 })
