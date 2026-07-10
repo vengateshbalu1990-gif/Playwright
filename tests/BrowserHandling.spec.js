@@ -3,10 +3,10 @@ test('browser handling',async()=>{
     const browser=await chromium.launch();
     const context=await browser.newContext();
     const page=await context.newPage();
-    await page.goto('https://www.amazon.in/');
+    await page.goto('https://www.flipkart.com/');
     await page.waitForTimeout(4000);
     const page2=await context.newPage();
-    await page2.goto('https://www.flipkart.com/');
+    await page2.goto('https://www.amazon.in/');
     await page2.waitForTimeout(4000);
 //browser 2 new to git
     const browser2=await chromium.launch();
