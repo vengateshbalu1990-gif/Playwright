@@ -5,4 +5,4 @@ await page.goto('https://www.amazon.in/');
 await page.waitForTimeout(4000);
 await page.locator()
 
-}
+})

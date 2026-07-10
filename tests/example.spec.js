@@ -21,17 +21,20 @@
 // import { asyncWrapProviders } from 'node:async_hooks';
 import { test } from '@playwright/test'
 
-test('Opening mynthra',async({page})=>{
-    await page.goto('https://www.myntra.com/');
+test('Opening mynthra', async ({ page }) => {
+    await page.goto('https://www.meesho.com/', {
+        waitUntil: 'domcontentloaded',
+        timeout: 60000,
+    });
     console.log(await page.title());
     console.log(await page.url());
-    await page.screenshot({path:'./Mynthra.png'});
-    await page.waitForTimeout(4000);
+    await page.screenshot({ path: './Mynthra.png' });
 
-    await page.goto('https://www.meesho.com/');
+    await page.goto('https://www.meesho.com/', {
+        waitUntil: 'domcontentloaded',
+        timeout: 60000,
+    });
     console.log(await page.title());
     console.log(await page.url());
-    await page.screenshot({path:'./meesho.png'});
-    
-    await page.waitForTimeout(4000);
+    await page.screenshot({ path: './meesho.png' });
 })
