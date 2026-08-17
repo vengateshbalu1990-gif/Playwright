@@ -1,8 +1,14 @@
 import { test } from '@playwright/test'
 
-test('Opening Demoqa',async({page})=>{
-await page.goto('https://demoqa.com/text-box');
-await page.waitForTimeout(4000);
+test('Opening Demoqa', async ({ page }) => {
+	try {
+		await page.goto('https://demoqa.com/text-box', { waitUntil: 'domcontentloaded', timeout: 30000 });
+	} catch (e) {
+		console.error('Navigation failed:', e.message);
+		// retry with longer timeout
+		await page.goto('https://demoqa.com/text-box', { waitUntil: 'networkidle', timeout: 60000 });
+	}
+	await page.waitForTimeout(4000);
 await page.locator('#userName').fill('Vengatesh');
 await page.waitForTimeout(2000);
 await page.locator("[placeholder='name@example.com']").fill('vengi1990@gmail.com');
