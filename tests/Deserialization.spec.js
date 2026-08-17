@@ -11,7 +11,7 @@ test('Validate employee details from JSON', async () => {
   console.log('Second Mobile Number:', secondMobile);
   expect(secondMobile).toBeDefined();
 
-  // Verify employee has skillset "API"
+  // Verify employee has the skillset name "API"
   const skillset = employee.skills.includes("API");
   console.log('Has API Skill:', skillset);
   expect(skillset).toBe(true);
