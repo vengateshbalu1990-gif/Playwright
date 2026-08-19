@@ -1,0 +1,7 @@
+{
+  "employee": {
+    "name": "Vengatesh Balu",
+    "mobileNumbers": ["9965869078", "9894969078"],
+    "skills": ["Automation", "Manual Testing", "API", "Playwright"]
+  }
+}
